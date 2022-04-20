@@ -29,7 +29,7 @@ const main = async () => {
 
             case '2':
                 // ListTasks
-                console.log(tasks.listArray);
+                tasks.completeList();
                 break;
 
             default:
