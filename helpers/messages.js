@@ -4,8 +4,7 @@ const showMenu = () => {
     return new Promise( resolve => {
         console.clear();
 
-        const title = `==============================\n   Please select an option   \n============================== \n`;     
-        console.log(title.green);
+        
     
         console.log(`${'1.'.green} Create task`);
         console.log(`${'2.'.green} List tasks`);
