@@ -1,6 +1,7 @@
 require('colors');
 
 const { inquirerMenu, pause, readInput } = require('./helpers/inquirer');
+const { saveData } = require('./helpers/saveFile');
 const Tasks = require('./models/tasks');
 
 
@@ -27,6 +28,8 @@ const main = async () => {
             default:
                 break;
         }
+
+        saveData( tasks.listArray );
 
         await pause();
 
