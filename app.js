@@ -11,7 +11,7 @@ const main = async () => {
     const tasks = new Tasks();
 
     const taskDb = readData(); // Upload file data to memory
-    if ( taskDb ) {
+    if (taskDb) {
         tasks.loadArrayTasks(taskDb);
     }
 
@@ -24,7 +24,7 @@ const main = async () => {
             case '1':
                 // CreateTask
                 const desc = await readInput('Description: ');
-                tasks.createTasks( desc ); 
+                tasks.createTasks(desc);
                 break;
 
             case '2':
@@ -32,11 +32,21 @@ const main = async () => {
                 tasks.completeList();
                 break;
 
+            case '3':
+                // ListCompletedTasks
+                tasks.listPendingCompleted(false);
+                break;
+
+            case '4':
+                // ListTasks
+                tasks.listPendingCompleted(true);
+                break;
+
             default:
                 break;
         }
 
-        saveData( tasks.listArray );
+        saveData(tasks.listArray);
 
         await pause();
 
