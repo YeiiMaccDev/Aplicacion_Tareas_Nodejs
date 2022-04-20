@@ -17,6 +17,13 @@ class Tasks {
         this._list = {};
     }
 
+    // Upload file data to memory
+    loadArrayTasks(tasks = []) {
+        tasks.forEach( task => {
+            this._list[task.id] = task
+        });
+    }
+
     createTasks(description = '') {
         const task = new Task(description);
         this._list[task.id] = task;

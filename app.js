@@ -10,12 +10,12 @@ const main = async () => {
     let opt = ``;
     const tasks = new Tasks();
 
-    const taskDb = readData();
+    const taskDb = readData(); // Upload file data to memory
     if ( taskDb ) {
-        
+        tasks.loadArrayTasks(taskDb);
     }
 
-    await pause();
+    // await pause();
 
     do {
         opt = await inquirerMenu();
