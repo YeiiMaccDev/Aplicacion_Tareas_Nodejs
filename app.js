@@ -21,7 +21,7 @@ const main = async () => {
 
             case '2':
                 // ListTasks
-                console.log(tasks._list);
+                console.log(tasks.listArray);
                 break;
 
             default:
