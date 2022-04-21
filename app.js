@@ -45,7 +45,7 @@ const main = async () => {
             case '5':
                 // Check completed | pending tasks
                 const ids = await showListTasksCheck(tasks.listArray);
-                console.log(ids);
+                tasks.toggleCompleted(ids);
                 break;
 
             case '6':
